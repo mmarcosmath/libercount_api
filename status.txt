@@ -1,0 +1,16 @@
+200 ok
+201 create
+400 erro bad request
+401 não autenticado
+403 acesso negado
+500 internal server error
+
+
+const MongoClient = require('mongodb').MongoClient;
+const uri = "mongodb+srv://marcos:010717@libercluster-sdizp.azure.mongodb.net/test?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true });
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  client.close();
+});
