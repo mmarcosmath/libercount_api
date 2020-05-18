@@ -7,7 +7,7 @@ const app = express()
 const router = express.Router()
 
 //Connecta ao banco
-mongoose.connect('mongodb+srv://marcos:010717@libercluster-sdizp.azure.mongodb.net/test?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://marcos:senha@libercluster-sdizp.azure.mongodb.net/test?retryWrites=true&w=majority')
 
 //Carrega Models
 const Exemplar = require('./models/livro.js');
